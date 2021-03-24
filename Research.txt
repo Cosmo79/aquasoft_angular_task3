@@ -1,0 +1,63 @@
+- Ce sunt directivele + exemple
+    Directivele sunt clase care adauga un comportament suplimentar elementelor aplicatiei, fiecare directiva are un nume  
+    predefinit cu care putem gestiona formulare, liste, stiluri sau unul dat de noi cu scop diferit.
+
+    Directivele se impart in: componente, attribute directives si structural directivs.
+    Exemple: ng-repeat, hidden, ngClass, nfIf, ngFor.
+
+- Care este diferenta dintre o componenta si o directiva
+    O componenta este o directiva cu template.
+
+- Ce este un template?
+    Un template este o sectiune de HTML pe care o incluzi ca parte a unei pagini pe care browserul o afiseaza.
+    Un template randeaza un view sau user interface precum un html, doar cu mai multe functionalitati.
+
+- Ce este un service? 
+    Un service este de obicei o clasa cu un scop mic, bine definit, cuprinde orice valoare, functie sau caracteristica
+    necesara aplicatiei, poti face un service disponibil in orice parte a aplicatiei folosind dependency injection.
+
+- Cum se face requestul catre backend in Angular?
+    Requestul catre backend in Angular se face print-un http protocol numit HttpClient service pentru a incarca sau 
+    descarca date si a accesa alte servicii din backend.
+
+- cum se face dependency injection (pentru serviciu in componenta)
+    Ex: Creezi serviciul EmployeeService, inregistrezi serviciul cu angular injector, in final declari serviciul ca o 
+    dependenta in clasele care au nevoie, cum ar fi EmployeeList si EmployeeDetail.
+
+- ce este un modul?
+    Un modul se refera la un loc unde putem grupa componentele, directivele si serviciile aplicatiei.
+
+- lifecycle methods
+    ngOnChanges(), ngOnInit(), ngDoCheck(), ngAfterContentInit(), ngAfterContentChecked(), ngAfterViewInit(), 
+    ngAfterViewChecked(), ngOnDestroy().
+
+- ngFor, ngIf
+    Sunt directive structurale, au rolul de a modifica DOM prin adaugarea sau eliminarea anumitor elemente.
+
+- interpolation
+    Interpolarea este folosita pentru a afisa proprietatile componentei in view template, se foloseste sintaxa {{}}.
+    
+- HttpClient
+    HttpClient este un mod incorporat de a prelua date de la API uri externe si de a le furniza in aplicatiile noastre.
+    
+- angular routing + routing events
+    Angular router permite navigarea interpretand o adresa URL ca o instructiune de modificare a view-ului.
+    Pentru a detecta  un routing event, trebuie creat  un service separat: app.route-change.service.ts si
+    in injectat in app-component.ts
+
+- data binding types
+    Au rolul de a tine pagina up-to-date in functie de stadiul aplicatiei. Folosim data biding pentru a specifica
+    sursa unei imagini, starea unui buton sau datele pentru un user.
+    Tipuri:
+        String Interpolation,
+        Property Binding,
+        Event Binding,
+        Two-Way Data Binding.
+- Observable vs Promise (ce sunt, diferente, cum se foloseste fiecare in service si in componenta) 
+    Observable lasa sa treaca de la 0 pana mai multe evenimente unde este apelat un callback.
+    Observable este preferat in loc de promise deoarce ofera aceleasi caracteristici si altele in plus.
+    Fata de Promise, Observable are avantajul de a fi anulat.
+    
+- operatori rxjs
+    Operatorii sunt functii care se construiesc pe baza observabilelor pentru a permite manipularea colectiilor.
+    Operatori rxjs: map (), filter (), concat () si flatMap (). Folosim pipes pentru a lega mai multe functii.
