@@ -1,8 +1,8 @@
-export class Project {
-  public id: number;
-  public project_name: string;
-  public start_date: string;
-  public planned_end_date: string;
-  public description: string;
-  public project_code: string;
+export interface Project {
+  id: number;
+  project_name: string;
+  start_date: string;
+  planned_end_date: string;
+  description: string;
+  project_code: string;
 }

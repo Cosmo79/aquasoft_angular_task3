@@ -1,0 +1,89 @@
+<div class="container">
+  <h1>Edit Employee</h1>
+
+  <a href="#" routerLink="/employees" class="btn btn-primary">Back</a>
+      
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+            formControlName="name"
+            id="name" 
+            type="text" 
+            [(ngModel)]="employee.name"
+            class="form-control">
+        <div *ngIf="f.name.touched && f.name.invalid" class="alert alert-danger">
+            <div *ngIf="f.name.errors.required">Name is required.</div>
+        </div>
+      </div>
+       
+      <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+              formControlName="email"
+              id="email" 
+              type="text" 
+              [(ngModel)]="employee.email"
+              class="form-control">
+          <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+              <div *ngIf="f.email.errors.required">email is required.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="hire_date">hire_date:</label>
+        <input
+            formControlName="hire_date"
+            id="hire_date" 
+            type="any" 
+            [(ngModel)]="employee.hire_date"
+            class="form-control">
+        <div *ngIf="f.hire_date.touched && f.hire_date.invalid" class="alert alert-danger">
+            <div *ngIf="f.hire_date.errors.required">hire_date is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="salary">salary:</label>
+        <input
+            formControlName="salary"
+            id="salary" 
+            type="number" 
+            [(ngModel)]="employee.salary"
+            class="form-control">
+        <div *ngIf="f.salary.touched && f.salary.invalid" class="alert alert-danger">
+            <div *ngIf="f.salary.errors.required">salary is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="job_title">job_title:</label>
+        <input
+            formControlName="job_title"
+            id="job_title" 
+            type="text" 
+            [(ngModel)]="employee.job_title"
+            class="form-control">
+        <div *ngIf="f.job_title.touched && f.job_title.invalid" class="alert alert-danger">
+            <div *ngIf="f.job_title.errors.required">job_title is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="project_id">project_id:</label>
+        <input
+            formControlName="project_id"
+            id="project_id" 
+            type="number" 
+            [(ngModel)]="employee.project_id"
+            class="form-control">
+        <div *ngIf="f.project_id.touched && f.project_id.invalid" class="alert alert-danger">
+            <div *ngIf="f.project_id.errors.required">project_id is required.</div>
+        </div>
+      </div>
+
+      
+      <button class="btn btn-success float-right" type="submit" [disabled]="!form.valid">Update</button>
+  </form>
+</div>

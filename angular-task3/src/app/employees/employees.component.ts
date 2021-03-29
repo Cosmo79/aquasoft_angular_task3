@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
+import { Employee } from '../models/employee.model';
+
 
 @Component({
   selector: 'app-employees',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeesComponent implements OnInit {
 
-  constructor() { }
+  employees: Employee[] = [];
+
+  constructor(public employeeService: EmployeeService) { }
 
   ngOnInit(): void {
+    this.employeeService.getAll().subscribe((data: Employee[])=>{
+      this.employees = data;
+      console.log(this.employees);
+    })  
+  }
+
+  deleteEmployee(id: Number){
+    this.employeeService.deleteEmployee(id).subscribe(res => {
+      this.employees = this.employees.filter(item => item.id !== id);
+    });
   }
 
 }
