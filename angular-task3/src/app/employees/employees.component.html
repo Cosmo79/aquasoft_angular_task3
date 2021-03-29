@@ -1,1 +1,32 @@
-<p>employees works!</p>
+<div class="container mt-5">
+  <h2>List of Employees</h2>
+  <a routerLink="" class="btn btn-success md-5 mb-3">Add Employee</a>
+  <table class="table">
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Hire_date</th>
+      <th>Salary</th>
+      <th>Job_title</th>
+      <th>Project_id</th>
+      <th>Settings</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.hire_date }}</td>
+        <td>{{ employee.salary }}</td>
+        <td>{{ employee.job_title }}</td>
+        <td>{{ employee.project_id }}</td>
+        <td>
+          <a [routerLink]="['edit', employee.id]">Edit</a>
+          <button type="button" (click)="deleteEmployee(employee.id)" class="btn btn-danger ml-3">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
