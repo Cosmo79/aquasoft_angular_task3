@@ -3,6 +3,7 @@ import { EmployeeService } from 'src/app/employee.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from 'src/app/models/employee.model';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
+import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-edit-employee',
@@ -18,7 +19,8 @@ export class EditEmployeeComponent implements OnInit {
   constructor( 
     public employeeService: EmployeeService,
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+    private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
