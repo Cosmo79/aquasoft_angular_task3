@@ -10,6 +10,7 @@ import { EditEmployeeComponent } from './employees/edit-employee/edit-employee.c
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddEmployeeComponent } from './employees/add-employee/add-employee.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     EmployeesComponent,
     ProjectsComponent,
     EditEmployeeComponent,
+    AddEmployeeComponent,
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,7 @@ export class EmployeeService {
   };
 
   getEmployee(id): Observable<Employee> {
-    return this.httpClient.get<Employee>(this.baseUrl+ id)
+    return this.httpClient.get<Employee>(this.baseUrl + id)
     .pipe(
       catchError(this.errorHandler)
     )

@@ -3,7 +3,7 @@ import { EmployeeService } from 'src/app/employee.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from 'src/app/models/employee.model';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
-import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-edit-employee',
